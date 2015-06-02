@@ -7,6 +7,15 @@ of RPMs compatbile with fedora-19.
 Also contains pip and virtualenv to facilitate building omnibus/venv-style packages
 for python apps.
 
+Docker images
+-------------
+
+Images built from this repo are available from quay.io with the fedora version as
+the tag, eg:
+
+- `quay.io/getpantheon/rpmbuild-fedora:19`
+- `quay.io/getpantheon/rpmbuild-fedora:20`
+
 Deprecation
 -----------
 
