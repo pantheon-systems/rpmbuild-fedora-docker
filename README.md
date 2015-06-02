@@ -15,7 +15,7 @@ the tag, eg:
 
 - `quay.io/getpantheon/rpmbuild-fedora:19`
 - `quay.io/getpantheon/rpmbuild-fedora:20`
-etc
+- ... etc ...
 
 Deprecation
 -----------
