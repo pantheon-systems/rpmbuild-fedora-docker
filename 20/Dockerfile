@@ -2,6 +2,10 @@ FROM fedora:20
 
 WORKDIR /tmp
 
+# make/update cache
+RUN yum makecache fast
+# makes everything faster
+RUN yum install -y deltarpm 
 # basic compiler and linker tools
 RUN yum install -y -d1 @development-tools
 # rpmbuild
