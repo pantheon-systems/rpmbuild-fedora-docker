@@ -1,10 +1,12 @@
 #!/bin/sh
 # `build ... -f` requires docker >= 1.5.x
-set -e
 
-image_base_name="quay.io/getpantheon/rpmbuild-fedora"
+BUILD_VERSIONS=${BUILD_VERSIONS:-19 20 22}
+echo "==> Running builds for these version(s): $BUILD_VERSIONS"
+echo
 
-for i in 19 20 22; do
+image_base_name="quay.io/getpantheon/fedora-test-kitchen"
+for i in $BUILD_VERSIONS; do
     full_image_name="${image_base_name}:${i}"
 
     echo "==> Building $dockerfile ($full_image_name)"
