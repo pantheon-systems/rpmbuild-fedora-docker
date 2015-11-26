@@ -5,7 +5,7 @@ BUILD_VERSIONS=${BUILD_VERSIONS:-19 20 22}
 echo "==> Running builds for these version(s): $BUILD_VERSIONS"
 echo
 
-image_base_name="quay.io/getpantheon/fedora-test-kitchen"
+image_base_name="quay.io/getpantheon/rpmbuild-fedora"
 for i in $BUILD_VERSIONS; do
     full_image_name="${image_base_name}:${i}"
 
