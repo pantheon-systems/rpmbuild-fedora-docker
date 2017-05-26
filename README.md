@@ -13,8 +13,7 @@ Docker images
 Images built from this repo are available from quay.io with the fedora version as
 the tag, eg:
 
-- `quay.io/getpantheon/rpmbuild-fedora:19`
-- `quay.io/getpantheon/rpmbuild-fedora:20`
+- `quay.io/getpantheon/rpmbuild-fedora:22`
 - ... etc ...
 
 Updating Containers
@@ -22,23 +21,15 @@ Updating Containers
 
 Before you are able to push to quay.io, you need to login with `docker login quay.io`, this
 will authenticate you and save your creds to `~/.dockercfg`. If you do not have an account
-on quay.io or access to the getpantheon org on quay.io, ask for help in the
-#infrastructure channel on Slack.
+on quay.io or access to the getpantheon org on quay.io.
 
-- Running `build.sh` will attempt to build all versions and push them to quay.io.
-
-- If you only want to build a specific version or versions, set the `BUILD_VERSIONS` env
+- Running `make all` will attempt to build all versions and push them to quay.io.
+- If you only want to build a specific version or versions, set the `VERSIONS` make
 variable, eg:
 
-    BUILD_VERSIONS="19" ./build.sh
+    make all VERSIONS="22"
 
-    BUILD_VERSIONS="20 22" ./build.sh
+    make build buid VERSIONS="20 22"
 
-Deprecation
------------
-
-This repository supersedes the following retired repos:
-
-- https://github.com/pantheon-systems/rpmbuild-fedora-19
-- https://github.com/pantheon-systems/rpmbuild-fedora-20
-- https://github.com/pantheon-systems/rpmbuild-fedora-21
+- If you just want a local build invoke `make build`
+- use `make` without args to get a list of tasks
