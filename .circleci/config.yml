@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run: make build
       - deploy:
-          name: push image to quay.io and deploy to kube cluster CLUSTER_ID
+          name: push image to quay.io
           command: |
             if [[ "${CIRCLE_BRANCH}" == "master" ]]; then
               docker login -p "$QUAY_PASSWD" -u "$QUAY_USER" -e "unused@unused" quay.io
