@@ -1,4 +1,4 @@
-IMAGE := quay.io/getpantheon/rpmbuid-fedora
+IMAGE := quay.io/getpantheon/rpmbuild-fedora
 LATEST := 24
 VERSIONS := 22 24
 
