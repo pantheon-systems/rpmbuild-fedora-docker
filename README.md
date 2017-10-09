@@ -27,9 +27,7 @@ on quay.io or access to the getpantheon org on quay.io.
 - If you only want to build a specific version or versions, set the `VERSIONS` make
 variable, eg:
 
-    make all VERSIONS="22"
-
-    make build buid VERSIONS="20 22"
+    make build VERSIONS="20 22"
 
 - If you just want a local build invoke `make build`
 - use `make` without args to get a list of tasks
