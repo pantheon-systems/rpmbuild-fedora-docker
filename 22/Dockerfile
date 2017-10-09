@@ -21,5 +21,5 @@ RUN dnf install -y -d1 @development-tools \
 # The rpmdev-setuptree program will create the ~/rpmbuild directory and a set of subdirectories (e.g. SPECS and BUILD)
 && rpmdev-setuptree \
 # clean up the cache
-&& dnf clean all --enablerepo=\*
-
+&& dnf clean all --enablerepo=\* \
+&& rpm --rebuilddb
