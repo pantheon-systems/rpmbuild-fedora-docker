@@ -29,7 +29,7 @@ variable, eg:
 
     make all VERSIONS="22"
 
-    make build buid VERSIONS="20 22"
+    make build VERSIONS="20 22"
 
 - If you just want a local build invoke `make build`
 - use `make` without args to get a list of tasks
