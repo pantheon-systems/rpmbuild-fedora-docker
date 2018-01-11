@@ -5,6 +5,7 @@ WORKDIR /tmp
 # basic compiler and linker tools
 RUN dnf install -y -d1 @development-tools \
 # rpmbuild \
+  sudo \
   rpm-build \
   rpmdevtools \
   redhat-rpm-config \
@@ -23,3 +24,7 @@ RUN dnf install -y -d1 @development-tools \
 # clean up the cache \
 && dnf clean all \
 && rpm --rebuilddb
+
+# for builds that may need a user
+RUN useradd -ms /bin/bash -d /work builder
+RUN echo "builder ALL = NOPASSWD:ALL" >> /etc/sudoers.d/builder
