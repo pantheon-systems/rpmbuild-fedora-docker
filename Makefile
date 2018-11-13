@@ -1,6 +1,6 @@
 IMAGE := quay.io/getpantheon/rpmbuild-fedora
-LATEST := 24
-VERSIONS := 22 24
+LATEST := 28
+VERSIONS := 22 28
 
 all: build push ## build and push all versions
 
