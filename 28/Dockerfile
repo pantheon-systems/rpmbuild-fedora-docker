@@ -1,4 +1,4 @@
-FROM fedora:24
+FROM fedora:28
 
 WORKDIR /tmp
 
@@ -22,8 +22,7 @@ RUN dnf install -y -d1 @development-tools \
 # The rpmdev-setuptree program will create the ~/rpmbuild directory and a set of subdirectories (e.g. SPECS and BUILD) \
 && rpmdev-setuptree \
 # clean up the cache \
-&& dnf clean all \
-&& rpm --rebuilddb
+&& dnf clean all
 
 # for builds that may need a user
 RUN useradd -ms /bin/bash -d /work builder
