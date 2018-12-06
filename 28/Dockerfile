@@ -24,6 +24,11 @@ RUN dnf install -y -d1 @development-tools \
 # clean up the cache \
 && dnf clean all
 
+# install docker edge releases. This is needed for some CI jobs that need to interact with a docker instance (pantheon-php is one example)
+RUN dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo \
+    && dnf config-manager --set-enabled docker-ce-edge \
+    && dnf install -y -d1 docker-ce
+
 # for builds that may need a user
 RUN useradd -ms /bin/bash -d /work builder
 RUN echo "builder ALL = NOPASSWD:ALL" >> /etc/sudoers.d/builder
