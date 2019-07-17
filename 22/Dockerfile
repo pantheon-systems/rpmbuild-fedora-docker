@@ -1,4 +1,4 @@
-FROM fedora:22
+FROM quay.io/getpantheon/fedora:22
 
 WORKDIR /tmp
 
