@@ -1,6 +1,8 @@
 rpmbuild-fedora-docker
 ======================
 
+[![Deprecated](https://img.shields.io/badge/Pantheon-Deprecated-yellow?logo=pantheon&color=FFDC28)](https://pantheon.io/docs/oss-support-levels#deprecated)
+
 Docker containers with dev tools and rpm tools pre-installed for facilitating the building
 of RPMs compatbile with various fedora releases.
 
